@@ -1,0 +1,560 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    scroll-behavior: smooth;
+    font-family: 'Inter', sans-serif;
+}
+
+:root{
+    --bg-color: #090516;
+    --second-bg-color: #081b29;
+    --text-color: #fff;
+    --second-color: #c2bfd1;
+    --main-color: #6b57ff;
+    --other-color: #b1e82d;
+
+    --h1-font: 5.5rem;
+    --h2-font: 3.6rem;
+    --p-font: 1rem;
+}
+body{
+    background: var(--bg-color);
+    color: var(--text-color);
+   
+}   
+
+header{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    padding: 35px 13%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color:transparent;
+    transition: all .50s ease;
+
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+    font-size: 26px;
+    color: var(--text-color);
+    font-weight: 600;
+    font-family: 'Oswald', sans-serif;
+
+
+}
+
+.logo img{
+    width: 100%;
+    height: auto;
+    margin-right: 12px;
+}
+
+.nav{
+    display: flex; 
+}
+.nav a {
+    font-size: var(--p-font);
+    font-weight: 400;
+    margin: 0 20px;
+    color: var(--text-color);
+    transition: all .50s ease;   
+}
+
+.nav a:hover{
+    color: var(--main-color);
+}
+
+.right-nav{
+    display: flex;
+    align-items: center;
+}
+
+.right-btn{
+    display: inline-block;
+    padding: 10px 26px;
+    font-size: 16px;
+    font-weight: 500;
+    border-radius: 30px;
+    background: var(--other-color);
+    color: var(--bg-color);
+    margin-right: 20px;
+    transition: all .50s ease;
+}
+
+.right-btn:hover{
+   background: var(--main-color);
+   color: var(--text-color);
+}
+#menu-icon{
+   font-size: 40px;
+   z-index: 10001;
+   cursor: pointer;
+   display: none;
+}
+
+section{
+    padding: 90px 13% 80px;
+
+}
+.home{
+  
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    background: url(photo/man2.jpg) ;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+
+photo{
+    background-image: url(photo/man2.jpg) ;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    width: 50%;
+    
+    float: right;
+    
+}
+.home-text h1{
+    font-family: 'Oswald', sans-serif;
+    font-size: 45px;
+    font-weight: 600;
+    line-height: 1.2;
+    margin: 25px 0 25px;
+}
+.home-text h1 span {
+    color: var(--main-color);
+    font-family: 'Oswald', sans-serif;
+    font-weight: 600;
+
+}
+.home-text h3 {
+    font-size: 22px;
+    font-weight: 500;
+}
+.count{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 30px;
+    margin-bottom: 50px;
+}
+
+.count li{
+    display: flex;
+    align-items: center;
+    font-size: 22px;
+    line-height: 1.3;
+    color: var(--second-color);
+}
+
+.count li span{
+    font-family: 'Oswald', sans-serif;
+    color: var(--text-color);
+    font-size: 3rem;
+    font-weight: 600;
+    margin-right: 20px;
+}
+
+.btn{
+    display: inline-block;
+    padding: 15px 35px;
+    color: var(--text-color);
+    background: var(--main-color);
+    border-radius: 50px;
+    font-size: 22px;
+    font-weight: 500;
+    transition: all .5s ease;
+}
+
+.btn:hover{
+    transform: scale(1.08)
+}
+
+header.sticky{
+    
+    background: #1a1330;
+    padding: 15px 13px;
+}
+
+.about{
+    background: var(--second-bg-color);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 2rem;
+
+}
+
+.about-img img{
+   width: 100%;
+   height: auto;
+}
+
+.about-text h2{
+    font-size: var(--h2-font);
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.about-text h4{
+    font-size: 22px;
+    font-weight: 600;
+    word-spacing: 5px;
+}
+.about-text h4 span{
+    color: var(--main-color);
+}
+.about-text p{
+    margin: 25px 0 40px;
+    width: 100%;
+    max-width: 550px;
+    font-size: var(--p-font);
+    font-weight: 400;
+    line-height: 35px;
+    color: var(--second-color);
+}
+
+.middle-text{
+    text-align: center;
+}
+
+.middle-text h2 {
+    font-size: var(--h2-font);
+    font-weight: 700;
+}
+.services-content{
+    margin-top: 4rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, auto));/*3 divni ketma ket qilib quyib beradi*/
+    align-items: center;
+    gap: 2.5rem;
+}
+
+.col{
+    padding: 50px 50px 60px;
+    background: var(--second-bg-color);
+    border-radius: 30px;
+    border: 2px solid transparent;
+    transition: all .50s ease;
+}
+/*bbbbbbb*/.col:hover{
+    transform: scale(1.05)  translateY(-5px);
+    border: 2px solid var(--main-color);
+    cursor: pointer;
+}
+.col h3{
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--main-color);
+    margin-bottom: 15px;
+}
+.col h4{
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.col p{
+    font-size: var(--p-font);
+    font-weight: 400;
+    line-height: 30px;
+    color: var(--second-color);
+    margin-bottom: 25px;
+}
+.s-btnn{
+    display: inline-block;
+    padding: 11px 22px;
+    color: var(--text-color);
+    background: var(--main-color);
+    border-radius: 30px;
+    font-size: 15px;
+    font-weight: 500;
+    transition: all .5s ease;  
+ 
+}
+
+/* btn class*/.s-btnn:hover{
+    background: var(--other-color);
+}
+
+.cta{
+    padding: 20px 13% 90px;
+}
+
+.cta-content{
+    padding: 70px 100px;
+    background: var(--second-bg-color);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    border-radius: 30px;
+}
+.cta-content h4{
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+.cta-content p {
+    font-size: var(--p-font);
+    font-weight: 400;
+    color: var(--second-color)      
+}
+
+
+.cta-btn{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 20px;
+}
+
+.cta-btn1{
+    display: inline-block;
+    padding: 11px 22px;
+    color: var(--bg-color);
+    background: var(--other-color);
+    border-radius: 30px;
+    font-size: 15px;
+    font-weight: 500;
+    transition: all .50s ease;
+}
+.cta-btn1:hover{
+    background: var(--main-color);
+    color: var(--text-color);
+}
+
+.cta-btn2{
+    display: inline-block;
+    padding: 11px 22px;
+    color: var(--text-color);
+    background: var(--main-color);
+    border-radius: 30px;
+    font-size: 15px;
+    font-weight: 500;
+    transition: all .50s ease;
+}
+.cta-btn2:hover{
+    transform: scale(1.1);
+}
+
+.contact{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 5rem;
+}
+.contact-text h5{
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--second-color);
+    margin-bottom: 20px;
+}
+.contact-text h2{
+    font-size: var(--h2-font);
+    font-weight: 700;
+    margin-bottom: 25px;
+}
+.contact-icons i{
+    display: inline-block;
+    
+    font-size: 25px;
+    color: var(--main-color);
+    margin-right: 20px;
+    transition: all .50s ease;
+}
+
+.contact-icons i:hover{
+    transform: translateY(-5px);
+    color: var(--text-color);
+}
+.contact-form form{
+    position: relative;
+}
+.contact-form form input,
+form textarea{
+    width: 100%;
+    border: none; 
+    outline: none;
+    padding: 18px;
+    background: var(--second-bg-color);
+    color: var(--second-color);
+    font-size: 1.1rem;
+    margin-bottom: 0.8rem;
+    border-radius: 12px;
+}
+
+.contact-form textarea{
+    resize: none;
+    height: 220px;
+
+}
+.contact-form .contact-btn{
+    border: none;
+    outline: ne;
+    width: 100%;
+    max-width: 200px;
+    display: inline-block;
+    padding: 20px 22px;
+    color: var(--text-color);
+    background: var(--main-color);
+    border-radius: 30px;
+    font-size: 15px;
+    font-weight: 500;
+    transition: all .50s ease;
+} 
+.contact-form .contact-btn:hover{
+    transform: scale(1.09);
+    cursor: pointer;
+}
+after
+.footer{
+    padding: 20px 13px;
+    background: var(--main-color);
+    text-align: center;
+    font-size: var(--p-font);
+    font-weight: 400; 
+}
+
+@media (max-width: 1650px){
+    header{
+        padding: 18px 7%;
+    }
+    header.sticky{
+        padding: 14px 7%;
+    }
+    section{
+        padding: 80px 7% 70px;
+    }
+    .cta{
+        padding: 20px 7% 70px;
+    }
+}
+
+@media (max-width: 1330px){
+    header{
+        padding: 18px 5%;
+    }
+    header.sticky{
+        padding: 14px 7%;
+    }
+    section{
+        padding: 90px 5% 70px;
+    }
+    .cta{
+        padding: 20px 5% 70px;
+    }
+    :root{
+        --h1-font: 4.7rem;
+        --h2-font: 3.5rem;
+        --p-font: 15px;
+    }
+    .services-content{
+        grid-template-columns: repeat(auto-fit, mimax(350px, auto) );
+    }
+}
+
+@media (max-width: 1170px){
+    .home{
+        height: 90vh;
+    }
+    :root{
+        --h1-font: 4.5rem;
+    }
+    .cta-content{
+        flex-direction: column;
+        text-align: center;
+        padding: 60px 70px;
+    }
+}
+
+@media (max-width: 1000px){
+    .about{
+        grid-template-columns: 1fr;
+        gap: 5px;
+    }
+    .contact{
+        grid-template-columns: 1fr;
+
+    }
+    .cta-btn{
+        gap: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+   
+    .cta-content{
+        padding: 40px 50px;
+    }
+}
+@media (max-width: 950px){
+    :root{
+        --h1-font: 4rem;
+        --h2-font: 3rem;
+    }
+    #menu-icon{
+        display: block;
+    }
+    .nav{
+        position: absolute;
+        min-height: 100vh;
+        width: 100%;
+        padding: 70px 60px;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 100%;
+        display: flex;
+        flex-direction: column;
+        background: #1a1330;
+        transition: all 0.6s ease-in-out;
+    }
+    .nav a{
+       display: block;
+       padding: 0;
+       margin: 0px 0px 25px 0px;
+       font-size: 2.1rem;
+       font-weight: 500; 
+    }
+
+    .nav.open{
+       left: 0;
+       
+    }
+}
+
+
+@media (max-width: 580px){
+    :root{
+        --h1-font: 3.5rem;
+        --h2-font: 2.7rem;
+    }
+    .count li{
+        font-size: 18px;
+    }
+    .count span{
+        font-size: 2rem;
+    }
+    .btn{
+        padding: 15px 28px;
+        font-size: 15px;
+    }
+}
